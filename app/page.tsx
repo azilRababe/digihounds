@@ -1,11 +1,12 @@
 import Navbar from "@/components/Navbar";
 import HeroBanner from "@/components/HeroBanner";
 import Services from "@/components/Services";
-import Process from "@/components/Process";
 import { EvervaultCard, Icon } from "@/components/ui/evervault-card";
 
 import { Boxes } from "@/components/ui/background-boxes";
 import { cn } from "@/lib/utils";
+
+import { servicesData } from "@/utils/data";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <HeroBanner />
       <Services />
       <section className="flex flex-wrap justify-center items-center gap-x-5 gap-y-10 ">
-        {services.map((item, index) => (
+        {servicesData.map((item, index) => (
           <div
             key={index}
             className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative h-[30rem]"
@@ -49,36 +50,3 @@ export default function Home() {
     </div>
   );
 }
-
-export const services = [
-  {
-    title: "SEO",
-    description:
-      "Optimize your online visibility. Our SEO strategies help you rank higher and attract quality organic traffic.",
-  },
-  {
-    title: "Social",
-    description:
-      "Engage and grow your community across all platforms with tailored content that resonates.",
-  },
-  {
-    title: "PPC",
-    description:
-      "Boost ROI with precision-targeted campaigns that drive conversions and business growth.",
-  },
-  {
-    title: "Content",
-    description:
-      "Craft compelling content that connects with your audience and builds your brand authority.",
-  },
-  {
-    title: "Web",
-    description:
-      "Design and develop modern, responsive websites that convert visitors into loyal customers.",
-  },
-  {
-    title: "Email",
-    description:
-      "Deliver personalized campaigns that captivate your audience and drive higher engagement and sales.",
-  },
-];

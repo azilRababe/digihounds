@@ -1,6 +1,4 @@
 import React from "react";
-import TypingAnimation from "@/components/ui/typing-animation";
-import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { VelocityScroll } from "@/components/ui/scroll-based-velocity";
 import SparklesText from "@/components/ui/sparkles-text";
 
