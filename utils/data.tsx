@@ -1,32 +1,57 @@
-export const servicesData = [
+const serviceDT = [
   {
-    title: "SEO",
+    title: "SEO Optimization",
     description:
-      "Optimize your online visibility. Our SEO strategies help you rank higher and attract quality organic traffic.",
+      "Rank higher on search engines with advanced SEO techniques that deliver results.",
+    link: "#",
   },
   {
-    title: "Social",
+    title: "PPC Advertising",
     description:
-      "Engage and grow your community across all platforms with tailored content that resonates.",
+      "Maximize your ROI with targeted pay-per-click campaigns that convert.",
+    link: "#",
   },
   {
-    title: "PPC",
-    description:
-      "Boost ROI with precision-targeted campaigns that drive conversions and business growth.",
+    title: "Social Media Management",
+    description: "Engage and grow your audience across all major platforms.",
+    link: "#",
   },
   {
-    title: "Content",
+    title: "Content Marketing",
     description:
-      "Craft compelling content that connects with your audience and builds your brand authority.",
+      "Create compelling content that drives traffic and builds brand authority.",
+    link: "#",
   },
   {
-    title: "Web",
+    title: "Web and App Development",
     description:
-      "Design and develop modern, responsive websites that convert visitors into loyal customers.",
+      "Build a stunning website or app that converts visitors into customers.",
+    link: "#",
   },
   {
-    title: "Email",
+    title: "Email Marketing",
     description:
-      "Deliver personalized campaigns that captivate your audience and drive higher engagement and sales.",
+      "Nurture leads and drive sales with targeted email marketing campaigns.",
+    link: "#",
   },
 ];
+
+const navItems = [
+  {
+    name: "Why Us",
+    href: "/whyus",
+    ariaLabel: "Discover our mission",
+  },
+  {
+    name: "About Us",
+    href: "/aboutus",
+    ariaLabel: "Learn about our story",
+  },
+  {
+    name: "Portfolio",
+    href: "/portfolio",
+    ariaLabel: "Explore our work",
+  },
+];
+
+export { serviceDT, navItems };

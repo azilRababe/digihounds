@@ -1,52 +1,56 @@
 import Navbar from "@/components/Navbar";
 import HeroBanner from "@/components/HeroBanner";
 import Services from "@/components/Services";
-import { EvervaultCard, Icon } from "@/components/ui/evervault-card";
-
-import { Boxes } from "@/components/ui/background-boxes";
-import { cn } from "@/lib/utils";
-
-import { servicesData } from "@/utils/data";
+import Footer from "@/components/Footer";
+import Process from "@/components/Process";
+import { MdOutlineDoneAll } from "react-icons/md";
 
 export default function Home() {
   return (
-    <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+    <>
       <Navbar />
       <HeroBanner />
-      <Services />
-      <section className="flex flex-wrap justify-center items-center gap-x-5 gap-y-10 ">
-        {servicesData.map((item, index) => (
-          <div
-            key={index}
-            className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative h-[30rem]"
-          >
-            <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-            <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-            <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-            <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
-
-            <EvervaultCard text={item.title} />
-
-            <h2 className="dark:text-white text-black mt-4 text-sm font-light">
-              {item.description}
-            </h2>
-          </div>
-        ))}
-      </section>
-      <section>
-        <div className="h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center md:rounded-3xl my-20">
-          <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
-
-          <Boxes />
-          <h1 className={cn("md:text-4xl text-xl text-white relative z-20")}>
-            Your Growth is Our Passion
-          </h1>
-          <p className="text-center mt-2 text-neutral-300 relative z-20">
-            We deliver creative, data-driven digital marketing solutions that
-            drive growth, turning businesses into industry leaders.
-          </p>
+      <section className="p-6" aria-label="services">
+        <div className="flex flex-col sm:flex-row justify-evenly text-white text-lg sm:text-xl">
+          <span className="flex items-center mb-4 sm:mb-0">
+            <MdOutlineDoneAll className="mr-2" /> Design
+          </span>
+          <span className="flex items-center mb-4 sm:mb-0">
+            <MdOutlineDoneAll className="mr-2" /> Development
+          </span>
+          <span className="flex items-center mb-4 sm:mb-0">
+            <MdOutlineDoneAll className="mr-2" /> Marketing
+          </span>
+          <span className="flex items-center mb-4 sm:mb-0">
+            <MdOutlineDoneAll className="mr-2" /> Strategy
+          </span>
         </div>
       </section>
-    </div>
+      <Services />
+      <Process />
+      <section className="flex flex-col md:flex-row items-center justify-around p-8 bg-transparent">
+        <div className="mt-6 md:mt-0">
+          <img
+            src="https://images.unsplash.com/photo-1523966211575-eb4a01e7dd51?q=80&w=3110&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Digital Marketing Services"
+            className="w-full h-auto max-w-md rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105"
+          />
+        </div>
+
+        <div className="text-center md:text-left md:max-w-lg">
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            Let’s Make Things Happen
+          </h1>
+          <p className="text-lg text-gray-300 mb-6">
+            Contact us today to learn more about how our digital marketing
+            services can help your business grow and succeed online.
+          </p>
+          <button className="bg-primary text-white rounded-full px-8 py-3 flex items-center justify-center gap-2 hover:bg-primary-dark transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl shadow-lg">
+            Book a Call
+          </button>
+        </div>
+      </section>
+      <Footer />
+    </>
   );
 }

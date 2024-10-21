@@ -1,35 +1,26 @@
 "use client";
 
-import React from "react";
+import { FaArrowTrendUp } from "react-icons/fa6";
 
 const HeroBanner = () => {
   return (
-    <div className="relative inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#b71c1c_100%)]">
-      <section className="flex flex-col items-center justify-center w-full h-screen text-center bg-cover bg-center">
-        <h1 className="text-5xl md:text-8xl font-extrabold text-white drop-shadow-lg leading-tight text-center">
-          Unleash Your Brand&apos;s Potential with Digihounds
-        </h1>
-
-        <p className="mt-4 text-xl md:text-2xl text-gray-200 max-w-lg md:max-w-2xl drop-shadow-md">
-          Ready to Run with the Best?
-        </p>
-        <div className="mt-8 flex space-x-4">
-          <a
-            href="#services"
-            className="px-8 py-4 bg-red-600 text-white text-lg md:text-xl font-semibold rounded-lg shadow-lg hover:bg-white hover:text-black 
-          hover:shadow-[4px_4px_0px_0px_#b71c1c] transition duration-200"
-          >
-            Explore Our Services
-          </a>
-          <a
-            href="#contact"
-            className="px-8 py-4 bg-transparent border-2 border-white text-white text-lg md:text-xl font-semibold rounded-lg hover:bg-white hover:text-black transition duration-300"
-          >
-            Let&apos;s Talk
-          </a>
-        </div>
-      </section>
-    </div>
+    <section className="flex flex-col justify-center items-center mx-auto w-11/12 md:w-2/3 my-28 text-center space-y-6">
+      <h1 className="text-4xl md:text-7xl font-bold flex items-center justify-center gap-3">
+        We Drive Growth to Your Business
+        <FaArrowTrendUp className="text-primary md:text-6xl" />
+      </h1>
+      <p className="text-lg md:text-2xl text-gray-700 max-w-xl">
+        Unlock the full potential of your business with our cutting-edge digital
+        marketing services.
+      </p>
+      <button className="bg-primary text-white rounded-full px-6 py-3 flex items-center gap-2 hover:bg-primary-dark transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl shadow-lg">
+        Book a Call
+        <FaArrowTrendUp
+          className="text-white bg-black p-1 rounded-full"
+          size={20}
+        />
+      </button>
+    </section>
   );
 };
 
