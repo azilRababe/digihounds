@@ -3,7 +3,7 @@ import { ProcessBeam } from "./ProcessBeam";
 
 const Process = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-12 bg-transparent md:m-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-12 bg-transparent md:mx-10">
       <div className="flex flex-col justify-center">
         <h2 className="text-4xl font-bold text-white mb-4">
           Our Commitment to Excellence
