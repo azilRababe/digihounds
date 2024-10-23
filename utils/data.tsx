@@ -38,13 +38,18 @@ const serviceDT = [
 
 const navItems = [
   {
-    name: "Why Us",
-    href: "/whyus",
-    ariaLabel: "Discover our mission",
+    name: "Home",
+    href: "/home",
+    ariaLabel: "Return to homepage",
   },
   {
-    name: "About Us",
-    href: "/aboutus",
+    name: "Services",
+    href: "/Services",
+    ariaLabel: "Explore our services",
+  },
+  {
+    name: "About us",
+    href: "/about",
     ariaLabel: "Learn about our story",
   },
   {

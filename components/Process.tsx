@@ -1,20 +1,20 @@
 import React from "react";
-import { ProcessBeam } from "./ProcessBeam";
+import Beam from "@/components/Beam";
 
 const Process = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-12 bg-transparent md:mx-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-12 bg-transparent md:mx-28 my-24">
       <div className="flex flex-col justify-center">
-        <h2 className="text-4xl font-bold text-white mb-4">
-          Our Commitment to Excellence
-        </h2>
-        <p className="text-lg text-gray-300 mb-4">
-          We promise to deliver the best results through our proven process,
-          ensuring quality and satisfaction at every step.
+        <h1 className="text-4xl font-bold text-white mb-5">
+          Excellence Delivered, Every Time
+        </h1>
+        <p className="text-md text-white">
+          We guarantee outstanding results with our streamlined, proven
+          process—ensuring speed, precision, and satisfaction at every step.
         </p>
       </div>
       <div className="flex items-center justify-center">
-        <ProcessBeam />
+        <Beam />
       </div>
     </div>
   );
