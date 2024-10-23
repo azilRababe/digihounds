@@ -21,7 +21,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
+        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-10",
         className
       )}
     >
@@ -29,23 +29,24 @@ export const HoverEffect = ({
         <Link
           href={item?.link}
           key={item?.link}
-          className="relative group block p-2 h-full w-full"
+          className="relative group block p-2 h-full w-full transition-transform transform hover:scale-105"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
+          tabIndex={0} // For keyboard accessibility
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-white block rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-gradient-to-tr from-red-600 to-red-500 opacity-80 rounded-3xl" // Changed to rounded-3xl
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
                   opacity: 1,
-                  transition: { duration: 0.15 },
+                  transition: { duration: 0.2 },
                 }}
                 exit={{
                   opacity: 0,
-                  transition: { duration: 0.15, delay: 0.2 },
+                  transition: { duration: 0.2, delay: 0.1 },
                 }}
               />
             )}
@@ -70,7 +71,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-[#212121] border border-transparent group-hover:border-slate-700 relative z-20",
+        "rounded-3xl h-full w-full p-6 overflow-hidden bg-gray-700 border border-red-500 group-hover:border-red-600 shadow-lg transition-shadow duration-300",
         className
       )}
     >
@@ -80,6 +81,7 @@ export const Card = ({
     </div>
   );
 };
+
 export const CardTitle = ({
   className,
   children,
@@ -88,11 +90,12 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-white font-bold tracking-wide mt-4", className)}>
+    <h4 className={cn("text-white font-bold tracking-tight text-lg", className)}>
       {children}
     </h4>
   );
 };
+
 export const CardDescription = ({
   className,
   children,
@@ -103,7 +106,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-white tracking-wide leading-relaxed text-sm",
+        "mt-2 text-gray-300 leading-relaxed text-sm",
         className
       )}
     >

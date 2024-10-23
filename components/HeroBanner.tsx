@@ -13,7 +13,7 @@ const HeroBanner = () => {
         Unlock the full potential of your business with our cutting-edge digital
         marketing services.
       </p>
-      <button className="bg-primary text-white rounded-full px-6 py-3 flex items-center gap-2 hover:bg-primary-dark transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl shadow-lg">
+      <button className="bg-primary text-white rounded-full px-6 py-3 flex items-center gap-2 hover:bg-green-500 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl shadow-lg">
         Book a Call
         <FaArrowTrendUp
           className="text-white bg-black p-1 rounded-full"
