@@ -5,15 +5,17 @@ import { CoolMode } from "@/components/ui/cool-mode";
 interface ButtonProps {
   content: string;
   className?: string;
-  onClick?: () => void;
+  // onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ content, className, onClick }) => {
+const Button: React.FC<ButtonProps> = ({ content, className }) => {
   return (
     <CoolMode>
       <div className="z-10 flex items-center justify-center">
         <ShimmerButton className="shadow-2xl" background="#b71c1c">
-          <span className="whitespace-pre-wrap text-center leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-md">
+          <span
+            className={`${className}"whitespace-pre-wrap text-center leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-md`}
+          >
             {content}
           </span>
         </ShimmerButton>

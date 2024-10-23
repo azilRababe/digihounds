@@ -74,7 +74,7 @@ const ContactForm: React.FC = () => {
 
       <Button
         content="Send"
-        className="mt-4 bg-primary text-white rounded-lg px-6 py-3 hover:bg-primary-dark transition duration-300"
+        className=" bg-primary text-white rounded-lg px-6 hover:bg-primary-dark transition duration-300"
       />
     </form>
   );
