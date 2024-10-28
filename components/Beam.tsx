@@ -33,7 +33,7 @@ const Beam = () => {
 
   return (
     <div
-      className="relative flex w-full max-w-[500px] items-center justify-center overflow-hidden rounded-lg  bg-background p-10 md:shadow-xl"
+      className="relative flex w-full max-w-[500px] items-center justify-center overflow-hidden rounded-lg"
       ref={containerRef}
     >
       <div className="flex size-full flex-col items-stretch justify-between gap-10">

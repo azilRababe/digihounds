@@ -23,4 +23,10 @@ html {
   );
   background-size: cover;
   background-attachment: fixed;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Hides scrollbar in WebKit-based browsers (e.g., Chrome, Safari) */
 }

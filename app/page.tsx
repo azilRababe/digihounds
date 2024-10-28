@@ -32,7 +32,6 @@ export default function Home() {
       <Services />
       <Process />
       <ContactForm />
-
       <Footer />
     </>
   );
