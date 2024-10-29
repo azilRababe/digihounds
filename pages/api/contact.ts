@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { sendEmail } from "@/utils/nodemailer";
+import { sendMail } from "@/utils/nodemailer";
 
 export default async function contactHandler(
   req: NextApiRequest,
@@ -8,12 +8,8 @@ export default async function contactHandler(
   if (req.method === "POST") {
     const { name, email, message } = req.body;
 
-    if (!name || !email || !message) {
-      return res.status(400).json({ error: "All fields are required" });
-    }
-
     try {
-      await sendEmail(name, email, message);
+      await sendMail({ name, email, message });
       res.status(200).json({ message: "Message sent successfully!" });
     } catch (error) {
       res.status(500).json({ error: `Failed to send message | ${error}` });

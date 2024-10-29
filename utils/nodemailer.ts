@@ -1,19 +1,21 @@
 import nodemailer from "nodemailer";
 
-export const sendEmail = async (
-  name: string,
-  email: string,
-  message: string
-) => {
-  let transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.USER_EMAIL,
-      pass: process.env.USER_PASSWORD,
-    },
-  });
+interface MailData {
+  name: string;
+  email: string;
+  message: string;
+}
 
-  let mailOptions = {
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.USER_EMAIL,
+    pass: process.env.USER_PASSWORD,
+  },
+});
+
+export const sendMail = async ({ name, email, message }: MailData) => {
+  const info = await transporter.sendMail({
     from: email,
     to: process.env.USER_EMAIL,
     subject: `Digihounds | New message from ${name}`,
@@ -28,12 +30,7 @@ export const sendEmail = async (
         cid: "kityy2.0",
       },
     ],
-  };
+  });
 
-  try {
-    await transporter.sendMail(mailOptions);
-    console.log("Email sent successfully!");
-  } catch (error) {
-    console.log("Error: ", error);
-  }
+  console.log("Message sent: %s", info.messageId);
 };
