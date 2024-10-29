@@ -26,11 +26,14 @@ export const sendEmail = (name: string, email: string, message: string) => {
     ],
   };
 
-  transporter.sendMail(mailOptions, function (err, data) {
-    if (err) {
-      console.log("Error " + err);
-    } else {
-      console.log("Email sent successfully");
+  const sendMesage = async () => {
+    try {
+      await transporter.sendMail(mailOptions);
+      console.log("Email sent successfully!");
+    } catch (error) {
+      console.log("Error: ", error);
     }
-  });
+  };
+
+  sendMesage();
 };
