@@ -4,14 +4,14 @@ export const sendEmail = (name: string, email: string, message: string) => {
   let transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.EMAIL,
-      pass: process.env.PASSWORD,
+      user: process.env.USER_EMAIL,
+      pass: process.env.USER_PASSWORD,
     },
   });
 
   let mailOptions = {
     from: email,
-    to: process.env.EMAIL,
+    to: process.env.USER_EMAIL,
     subject: `Digihounds | New message from ${name}`,
     html: `
     <p>${message}</p>
