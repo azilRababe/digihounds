@@ -19,17 +19,7 @@ export const sendMail = async ({ name, email, message }: MailData) => {
     from: email,
     to: process.env.USER_EMAIL,
     subject: `Digihounds | New message from ${name}`,
-    html: `
-    <p>${message}</p>
-    <img src="cid:kitty2.0" alt="Excuse me!" />
-  `,
-    attachments: [
-      {
-        filename: "cuteKitty.gif",
-        path: "public/images/kitty.gif",
-        cid: "kityy2.0",
-      },
-    ],
+    text: message,
   });
 
   console.log("Message sent: %s", info.messageId);
