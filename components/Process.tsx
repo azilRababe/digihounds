@@ -3,7 +3,10 @@ import Beam from "@/components/Beam";
 
 const Process = () => {
   return (
-    <div className="grid gap-8 px-6 md:px-12 lg:mx-28 my-20 bg-transparent">
+    <div
+      className="grid gap-8 px-6 md:px-12 lg:mx-28 my-20 bg-transparent"
+      id="about"
+    >
       <div className="text-center flex flex-col items-center">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
           Excellence Delivered, Every Time

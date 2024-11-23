@@ -39,22 +39,22 @@ const serviceDT = [
 const navItems = [
   {
     name: "Home",
-    href: "/home",
+    href: "#home",
     ariaLabel: "Return to homepage",
   },
   {
     name: "Services",
-    href: "/Services",
+    href: "#services",
     ariaLabel: "Explore our services",
   },
   {
     name: "About us",
-    href: "/about",
+    href: "#about",
     ariaLabel: "Learn about our story",
   },
   {
     name: "Portfolio",
-    href: "/portfolio",
+    href: "#portfolio",
     ariaLabel: "Explore our work",
   },
 ];
